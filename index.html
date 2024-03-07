@@ -1,0 +1,71 @@
+<!DOCTYPE html> <html><head>
+        <title>5.P gustavo project</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: black;
+    text-align: left;
+    color: yellow;
+}
+
+
+
+img {
+    width: 400px;
+}</style></head>
+    <body>
+
+        <div class="title">
+            <h1>What type of student are you</h1>
+        </div>
+
+        <div class="english-div">
+
+
+
+        </div>
+
+
+        <div class="questions">
+            <h2>How many days a week do you come to school</h2>
+
+            <input class="attendance" placeholder="enter a number">
+            <div class="english-message"></div>
+
+            <img src="https://i.ytimg.com/vi/ayKv18orYug/maxresdefault.jpg" alt="picture of the days of the week">
+            <h2>Are you rude or nice?</h2>
+
+            <input class="feelings" placeholder="your answer">
+            <button class="english-button">Submit</button>
+            <div class="english-message"></div>
+
+            <img src="https://media.istockphoto.com/id/1013517898/vector/emotions-with-smiles.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=eu-b7U_jKEzVuGwAqNH5xCL3rnuVbe1_ibJj6lPis9Y=" alt="picture of how you are feeling from good to bad">
+        </div>
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+
+
+
+    
+<script>
+/*__POPCODESTART__*/
+var button = document.querySelector("button");
+var letterGrade = document.querySelector(".letter-grade");
+var result = document.querySelector(".result");
+
+button.onclick = function () {
+  var days = document.querySelector(".attendance").value;
+  var mood = document.querySelector(".feelings").value;
+
+  if (days > 3 && mood === "nice") {
+    result.innerHTML = "You are an A student";
+  } else if (days > 3 && mood === "rude") {
+    result.innerHTML = "You are a B student";
+  } else if (days < 3 && mood === "nice") {
+    result.innerHTML = "You are a C student";
+  } else if (days < 3 && mood === "rude") {
+    result.innerHTML = "You are an F student";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImJ1dHRvbiIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImxldHRlckdyYWRlIiwicmVzdWx0Iiwib25jbGljayIsImRheXMiLCJ2YWx1ZSIsIm1vb2QiLCJpbm5lckhUTUwiXSwibWFwcGluZ3MiOiJBQUFBLElBQUlBLE1BQU0sR0FBR0MsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLENBQWI7QUFDQSxJQUFJQyxXQUFXLEdBQUdGLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixlQUF2QixDQUFsQjtBQUNBLElBQUlFLE1BQU0sR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQWI7O0FBQ0FGLE1BQU0sQ0FBQ0ssT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLElBQUksR0FBR0wsUUFBUSxDQUFDQyxhQUFULENBQXVCLGFBQXZCLEVBQXNDSyxLQUFqRDtBQUNBLE1BQUlDLElBQUksR0FBR1AsUUFBUSxDQUFDQyxhQUFULENBQXVCLFdBQXZCLEVBQW9DSyxLQUEvQzs7QUFDQSxNQUFJRCxJQUFJLEdBQUcsQ0FBUCxJQUFZRSxJQUFJLEtBQUssTUFBekIsRUFBaUM7QUFDN0JKLElBQUFBLE1BQU0sQ0FBQ0ssU0FBUCxHQUFtQixzQkFBbkI7QUFDSCxHQUZELE1BRU8sSUFBSUgsSUFBSSxHQUFHLENBQVAsSUFBWUUsSUFBSSxLQUFLLE1BQXpCLEVBQWlDO0FBQ3BDSixJQUFBQSxNQUFNLENBQUNLLFNBQVAsR0FBbUIscUJBQW5CO0FBQ0gsR0FGTSxNQUVBLElBQUlILElBQUksR0FBRyxDQUFQLElBQVlFLElBQUksS0FBSyxNQUF6QixFQUFpQztBQUNwQ0osSUFBQUEsTUFBTSxDQUFDSyxTQUFQLEdBQW1CLHFCQUFuQjtBQUNILEdBRk0sTUFFQSxJQUFJSCxJQUFJLEdBQUcsQ0FBUCxJQUFZRSxJQUFJLEtBQUssTUFBekIsRUFBaUM7QUFDcENKLElBQUFBLE1BQU0sQ0FBQ0ssU0FBUCxHQUFtQixzQkFBbkI7QUFDSDtBQUlKLENBZkQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbmxldCBsZXR0ZXJHcmFkZSA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIubGV0dGVyLWdyYWRlXCIpO1xubGV0IHJlc3VsdCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpO1xuYnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiAgICBsZXQgZGF5cyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuYXR0ZW5kYW5jZVwiKS52YWx1ZTtcbiAgICBsZXQgbW9vZCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIuZmVlbGluZ3NcIikudmFsdWU7XG4gICAgaWYgKGRheXMgPiAzICYmIG1vb2QgPT09IFwibmljZVwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIllvdSBhcmUgYW4gQSBzdHVkZW50XCI7XG4gICAgfSBlbHNlIGlmIChkYXlzID4gMyAmJiBtb29kID09PSBcInJ1ZGVcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gXCJZb3UgYXJlIGEgQiBzdHVkZW50XCI7XG4gICAgfSBlbHNlIGlmIChkYXlzIDwgMyAmJiBtb29kID09PSBcIm5pY2VcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gXCJZb3UgYXJlIGEgQyBzdHVkZW50XCI7XG4gICAgfSBlbHNlIGlmIChkYXlzIDwgMyAmJiBtb29kID09PSBcInJ1ZGVcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gXCJZb3UgYXJlIGFuIEYgc3R1ZGVudFwiO1xuICAgIH1cbiAgICBcbiAgICBcblxufTsiXX0=</script></body></html>
